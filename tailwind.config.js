@@ -2,7 +2,10 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      'grid': 'display:grid',
+      
+    },
   },
   plugins: [],
 };
