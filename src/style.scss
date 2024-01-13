@@ -49,31 +49,58 @@
  main{
     background-color: gray;
     a{
-         
+     
+         color: white;
         margin-top: 2vh;
         align-self: center;
         font-family: 'Playfair Display', system-ui;
-        font-size: 24px;
-        text-decoration: underline;
+        font-size: 20px;
+        font-weight: bold;
         cursor:pointer ;
     }
-    #wrap{
-        margin-bottom: 10px;
-        box-shadow: -1px 0px 5px 10px #FFBF00;
-       margin-top: 2vh;
-       max-width: 780px;
-       margin-left: 30vw;
-       overflow: hidden;
-       #slider{
-        
-        max-width: 780px;
-      display: inline-flex;
-        img{
-            min-width: 780px;
+    a:hover{
+        background-color: #FFBF00;
+        border-color: #FFBF00;
+        color: black;
+    }
+   #wrap{
+    margin-bottom: 10px;
+    box-shadow: -1px 0px 5px 10px #FFBF00;
+   margin-top: 2vh;
+   max-width: 780px;
+   margin-left: 30vw;
+   overflow: hidden;
+   #slider{
+    
+    max-width: 780px;
+  display: inline-flex;
+    img{
+        min-width: 780px;
+    }
+    display: flex;
+
+   }
+}
+#content{
+    #whoIs{
+        max-height: 35vh;
+    }
+    div{
+        h1{
+            font-size: 30px;
+            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid black;
+           border-bottom-style: groove;
         }
         display: flex;
- 
-       }
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        background-color: white;
+        width: 30vw;
+        height: auto;
+        border-radius: 20px;
     }
+}
  }
  
