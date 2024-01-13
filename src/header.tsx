@@ -24,11 +24,11 @@ export default function Header(){
        return <li className='border-solid border-2 border-black list-none w-24 h-10 text-center p-1 bg-gray-500 text-lg text-white' key = {tab}> {tab}</li>
     })
     return (
-        <header className="p-10"  >
-            <img className='ml-24' src = {logo} alt = 'FighterFoundation'></img>
+        <header key='header' className="p-10"  >
+            <img key='logo' className='ml-24' src = {logo} alt = 'FighterFoundation'></img>
             <h1 className='text-3xl mt-3 ml-80' >"I Think there is Always Hope"<br></br>-Michelle B. Dejong</h1>
             <h3 className='max-h-14 ml-10 border-solid border-2 border-black rounded-3xl text-2xl text-center p-1 mr-5 bg-gray-500 text-white'>Fight to cure Glioblastoma!</h3>
-            <nav className='flex ml-60'>{tabList}</nav>
+            <nav key='navbar' className='flex ml-60'>{tabList}</nav>
         </header>
     )
 }

@@ -45,3 +45,20 @@
         }
     }
  }
+ main{
+    #wrap{
+       margin-top: 2vh;
+       max-width: 780px;
+       margin-left: 30vw;
+       overflow: hidden;
+       #slider{
+        max-width: 780px;
+        img{
+            width: 780px;
+        }
+        display: flex;
+        transform: translateX(0);
+        transition: transform 1s ease-in-out;
+       }
+    }
+ }
