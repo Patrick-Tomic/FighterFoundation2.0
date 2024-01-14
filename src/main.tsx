@@ -37,7 +37,7 @@ export default function Main(){
         
         setTimeout(() =>{   
               if(count <= 4){
-                const ans = width+780
+                const ans = width+975
               setWidth(ans)
               const num = count+1
               setCount(num)
@@ -62,7 +62,7 @@ export default function Main(){
     
     return (
        <main className='border-solid border-red-500 border-2 flex flex-col'>
-        <a className="border-solid border-2 p-2" href="https://www.paypal.com/us/fundraiser/charity/2413284"><h1>Donate and Support</h1></a>
+        <a className="border-solid border-2 p-2  border-black" href="https://www.paypal.com/us/fundraiser/charity/2413284"><h1>Donate and Support</h1></a>
         
 
       <div id='wrap'>
