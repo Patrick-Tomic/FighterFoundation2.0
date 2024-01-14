@@ -82,12 +82,12 @@ export default function Main(){
              <h1>Who is Michelle?</h1>
              <p className='text-l'> On March 14th, 2014 Michelle Boyd DeJong was diagnosed with an inoperable brain tumor. The tumor was located on her brain stem and its position was blocking the normal circulation of cerebral brain fluid, which resulted in pooling and increased pressure<br></br><br></br> An endoscopic ventriculostomy and biopsy was performed on march 17th, followed by the insertion of a left ventriculoperitoneal shunt on March 27th; having a subsequent revision on June 23rd. <br></br><br></br> Released from Moffitt Cancer Center the day after her shunt surgery, she made a quick recovery and promptly sneaked out to have her forearm tattooed with our "fighter" logo. The prescribed 42 days of chemotherapy and 33 radiation treatments started on April 16th.<br></br><br></br>During the week between brain surgeries Michelle realized that there was only one way to face this challenge and it was the same way she approached life: with a positive and selfless attitude focused on using her experiences to help others. The "fighter" mentality that she embodied is so much more than a battle against her brain tumor; more importantly, it is a daily initiative to inspire others through action and attitude. This begins with a personal conscious decision and ends with changing lives.</p>
                 </div>
-          <div id='whoIs'className='p-0 '><h1>Who is a Fighter?</h1><p className='text-xl text-white p-2'> A fighter does not inspire because they have cancer, but a fighter inspires because of the character with which they fight it. A fighter faces challenges with unwavering positivity and relentless hope. Hope that they may take every opportunity to make a difference in the world. They fight for love, for family, for life.</p>
+          <div id='whoIs'className='p-10   '><h1>Who is a Fighter?</h1><p className='text-xl text-white p-2'> A fighter does not inspire because they have cancer, but a fighter inspires because of the character with which they fight it. A fighter faces challenges with unwavering positivity and relentless hope. Hope that they may take every opportunity to make a difference in the world. They fight for love, for family, for life.</p>
           <h1>Fight On!</h1>
                </div>
           <div>
-            <h1>Fighter Foundation Objectives</h1>
-            <ul className="list-disc p-2">
+            <h1 className='text-center'>Fighter Foundation Objectives</h1>
+            <ul className="list-disc p-3 xl:p-10 lg:p-12">
               {objList}
             </ul>
           
