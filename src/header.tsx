@@ -1,10 +1,10 @@
 import logo from './assets/logo.jpg'
-import {Link} from 'react-router-dom'
+/* import {Link} from 'react-router-dom' */
  import NavBar from './nav'
 import './style.scss'
 export default function Header(){
-    const tabs:string[] = ["Home","Programs", "About", 'Events', "Blog","Contact", "Store"]
-    const tabList = tabs.map((tab) => {
+  /*   const tabs:string[] = ["Home","Programs", "About", 'Events', "Blog","Contact", "Store"] */
+   /*  const tabList = tabs.map((tab) => {
         if(tab === ('About')){
             return (
                 <div id='about'>
@@ -34,7 +34,7 @@ export default function Header(){
             )
         }
        return <li className='border-solid border-2 border-black list-none w-24 h-10 text-center p-1 bg-white text-lg ' key = {tab}> <Link to='/'> {tab} </Link></li>
-    })
+    }) */
     return (
         <header key='header' className="p-10 bg-gray-500"  >
             <img key='logo' className='
