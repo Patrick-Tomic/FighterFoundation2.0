@@ -1,4 +1,6 @@
 import logo from './assets/logo.jpg'
+import {Link} from 'react-router-dom'
+ import NavBar from './nav'
 import './style.scss'
 export default function Header(){
     const tabs:string[] = ["Home","Programs", "About", 'Events', "Blog","Contact", "Store"]
@@ -31,7 +33,7 @@ export default function Header(){
                 </div>
             )
         }
-       return <li className='border-solid border-2 border-black list-none w-24 h-10 text-center p-1 bg-white text-lg ' key = {tab}> {tab}</li>
+       return <li className='border-solid border-2 border-black list-none w-24 h-10 text-center p-1 bg-white text-lg ' key = {tab}> <Link to='/'> {tab} </Link></li>
     })
     return (
         <header key='header' className="p-10 bg-gray-500"  >
@@ -44,7 +46,7 @@ export default function Header(){
             text-2xl text-center p-1 mr-5 bg-white text-gray-500
             xl:ml-20 xl:max-h-10  xl:min-w-72  lg:min-w-72 lg:ml-24
             '>Fight to cure Glioblastoma!</h3>
-            <nav key='navbar' className='flex ml-44 lg:ml-24'>{tabList}</nav>
+         <NavBar />
         </header>
     )
 }
