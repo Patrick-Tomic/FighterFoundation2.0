@@ -6,7 +6,7 @@ export default function NavBar(){
             <nav key='nav' className='flex ml-44 lg:ml-24'>
                 <li key = 'home' className='border-solid border-2 border-black list-none w-24 h-10 text-center p-1 bg-white text-lg '> <Link to= '/'>Home</Link></li>
                     <div id='about'>
-                    <li className='border-solid border-2 border-black list-none w-24 h-10 text-center bg-white p-1 text-lg' key = 'about'> <Link to='/'>About</Link></li>
+                    <li className='border-solid border-2 border-black list-none w-24 h-10 text-center bg-white p-1 text-lg' key = 'about'> <Link to='/about'>About</Link></li>
                     <li id ='hidden'className='border-solid border-2 border-black  list-none w-24 l h-24 te4 text-center lt-center p-1 bg-white text-xs 
                        min-h-12 
                     ' key = 'board'> <Link to='/board'>Meeting the Board</Link></li>
