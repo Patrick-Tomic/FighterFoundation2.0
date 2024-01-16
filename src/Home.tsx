@@ -58,7 +58,7 @@ export default function Home(){
   })
     
     return (
-      <>
+      <main className='flex flex-col'>
         <a className="border-solid border-2 p-2  border-black" href="https://www.paypal.com/us/fundraiser/charity/2413284"><h1>Donate and Support</h1></a>
         
 
@@ -96,6 +96,6 @@ export default function Home(){
            
           </div>   
              
-        </>
+        </main>
     );
 }
