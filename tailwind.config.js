@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      
+      fontFamily: {
+        'Playfair': ['Playfair Display', 'system-ui'],
+      },
       
     },
   },

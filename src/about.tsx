@@ -8,9 +8,8 @@ export default function About(){
     const quoteList = quotes.map((quote) =>{
         count++
         let content 
-        if(quote === GBM || bike){
+        if(quote === GBM || quote === bike){
             content = <img src ={quote}></img>
-       
         } else{
             content = <p className='text-center text-xl' >{quote}</p>
         }
@@ -66,12 +65,12 @@ export default function About(){
     const boardList = board.map((object) => createPerson(object.person,object.title,object.pic, object.key))
     return (
         <main className='flex flex-col m-0'>
-             <div className='grid grid-cols-4 gap-10'>
+             <div className='grid grid-cols-5 p-20 gap-10'>
             
                 {quoteList}
                 
              </div>
-            <div className='grid grid-cols-3'>
+            <div className='grid grid-cols-3 gap-20'>
                  {boardList}
              </div>
         </main>
@@ -81,13 +80,13 @@ export default function About(){
 function createPerson(name: ReactElement<any, string | JSXElementConstructor<any>> | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined, title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined, img: string | null | undefined, key: string){
     let pic
     if(img != null){
-        pic = <img className='max-w-52 rounded-sm' src = {img}></img>
+        pic = <img className='max-w-52 rounded-sm mb-10 shadow-lg shadow-black' src = {img}></img>
     }
     return (
-        <div key = {key} className=' border-solid border-black border-2'>   
+        <div key = {key} className='p-20'>   
             {pic}
-            <h1>{name}</h1>
-            <h3>{title}</h3>
+            <h1 className='text-2xl font-bold border-b-8 text-center border-double border-black '>{name}</h1>
+            <h3 className='text-center text-2xl max-w-52 Playfair'>{title}</h3>
         </div>
     )
 }
