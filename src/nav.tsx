@@ -10,7 +10,7 @@ export default function NavBar(){
                     
                     
                     <div id='programs'>
-                    <li className='hover:min-h-12 border-solid border-2 border-black list-none w-24 h-10 text-center p-1 text-lg bg-white' key ='programs'><Link to='/'>Programs</Link> </li>
+                    <li className='hover:min-h-12 border-solid border-2 border-black list-none w-24 h-10 text-center p-1 text-lg bg-white' key ='programs'><Link to='/programs'>Programs</Link> </li>
                      <li id ='hidden' className='border-solid border-2 text-center border-black  list-none w-24 l h-10 te4 lt-center p-1 bg-white  text-xs
                     min-h-12
                      ' key = 'patientResources'><Link to='/'>Patient Resources</Link></li>
