@@ -4,6 +4,12 @@ import hope from './assets/hope.jpeg'
 import quote from './assets/quote.jpeg'
 import {useEffect, useState} from 'react'
 export default function Home(){
+  
+ 
+   
+ 
+
+
     const imgs = [mural, race, hope, quote]
     const imgElements = imgs.map((img) => {
         if(window.innerWidth <= 1275){
@@ -16,20 +22,6 @@ export default function Home(){
    const initial = 0
     const [width, setWidth] = useState(initial)
     const [count, setCount] = useState(initial)
-    let length = 975
-    const wrap = document.getElementById('wrap')
-    if(window.innerWidth <= 1275){
-      length = 650
-      setCount(0)
-      setWidth(0)
-      wrap?.setAttribute('style', 'min-width:650px; max-width:650px')
-    }
-    else{
-     length = 975
-    }
-  
-          
-        
       let style = {
             transform: `translateX(-${width}px)`,
             transition: 'transform 1s ease-in-out'
@@ -43,22 +35,20 @@ export default function Home(){
                 
             }       
         }
-  
-  window.addEventListener('resize',()=>{
-    
-    if(window.innerWidth <= 1275){
-      length = 650
-      setCount(0)
-      setWidth(0)
-      wrap?.setAttribute('style', 'min-width:650px; max-width:650px')
-    }
-    else{
-
-    }
-  })
+       
     useEffect(() => {
-        
+      window.addEventListener('resize',()=>{
+        location.reload       
+       })
+      let length = 975
+      const wrap = document.querySelector('.wrap') 
+     
+        if(window.innerWidth <= 1275){
+          length = 650
+          wrap?.setAttribute('id','smallWrap')
+        }
       setTimeout(() =>{   
+        
             if(count <= 4){
               const ans = width+length
             setWidth(ans)
@@ -89,7 +79,7 @@ export default function Home(){
         <a className="border-solid border-2 p-2  border-black" href="https://www.paypal.com/us/fundraiser/charity/2413284"><h1>Donate and Support</h1></a>
         
 
-      <div className='border-solid border-black border-3' id='wrap'>
+      <div className='wrap border-solid border-black border-3' >
         <div style = {style} id='slider'>
         {imgElements}
         {firstClone}

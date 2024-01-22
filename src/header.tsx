@@ -36,7 +36,7 @@ export default function Header(){
        return <li className='border-solid border-2 border-black list-none w-24 h-10 text-center p-1 bg-white text-lg ' key = {tab}> <Link to='/'> {tab} </Link></li>
     }) */
     return (
-        <header key='header' className="p-10 bg-gray-500"  >
+        <header key='header' className="p-10 bg-gray-500 "   >
             <img key='logo' className='
             xl:ml-20
             ml-24 rounded-md border-solid border-black border-2' src = {logo} alt = 'FighterFoundation'></img>
