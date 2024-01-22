@@ -6,14 +6,28 @@ import {useEffect, useState} from 'react'
 export default function Home(){
     const imgs = [mural, race, hope, quote]
     const imgElements = imgs.map((img) => {
+        if(window.innerWidth <= 1275){
+          return  <img id='smaller'  key = {img} src = {img}></img> 
+        }else{
     return  <img   key = {img} src = {img}></img> 
+        }
 })
   const firstClone = imgElements.filter((img) => img.key === mural)
    const initial = 0
     const [width, setWidth] = useState(initial)
     const [count, setCount] = useState(initial)
-        console.log(count)
-        console.log(width)
+    let length = 975
+    const wrap = document.getElementById('wrap')
+    if(window.innerWidth <= 1275){
+      length = 650
+      setCount(0)
+      setWidth(0)
+      wrap?.setAttribute('style', 'min-width:650px; max-width:650px')
+    }
+    else{
+     length = 975
+    }
+  
           
         
       let style = {
@@ -29,26 +43,39 @@ export default function Home(){
                 
             }       
         }
-        
+  
+  window.addEventListener('resize',()=>{
+    
+    if(window.innerWidth <= 1275){
+      length = 650
+      setCount(0)
+      setWidth(0)
+      wrap?.setAttribute('style', 'min-width:650px; max-width:650px')
+    }
+    else{
+
+    }
+  })
     useEffect(() => {
         
-        setTimeout(() =>{   
-              if(count <= 4){
-                const ans = width+975
-              setWidth(ans)
-              const num = count+1
-              setCount(num)
-          
-            }
-            else if(count === 5){
-                const zero =0
-                setWidth(zero)
-                setCount(zero)
-           
-            }
-        }, 4000)
-       
-    }) 
+      setTimeout(() =>{   
+            if(count <= 4){
+              const ans = width+length
+            setWidth(ans)
+            const num = count+1
+            setCount(num)
+        console.log(width)
+          }
+          else if(count === 5){
+              const zero =0
+              setWidth(zero)
+              setCount(zero)
+         
+          }
+      }, 4000)
+  
+  }) 
+    
      let IDcount = 1
   const objectives = ['Funding and Advocating for Brain Tumor Research', 'Promoting Brain Tumor Awareness', 'Brain Tumor Patient and Caregiver Support', 'Community Volunteer Events']
   const objList = objectives.map((obj) =>{
