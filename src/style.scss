@@ -208,3 +208,65 @@ html, body{
          
     }
  }
+ @media(max-width:640px){
+    header{
+        #logo{
+            margin-left: 2vw;
+            max-width: 200px;
+        }
+        #quote{
+            margin-left: 6vw;
+            font-size: 25px;
+        }
+        #imgHeader{
+            width: 200px;
+            margin-left: 2vw;
+            font-size: 18px;
+        }
+    }
+    main{
+        #imgMural{
+            width:400px
+        }
+    }
+ }
+ #active{
+    animation: openSide 1s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 80%;
+    width: 25vw;
+   z-index: 2;
+    transform-origin: center right;
+  
+    
+}  
+#deActive{
+    animation: closeSide 1s;
+    transform-origin: center right;
+}
+
+@keyframes openSide {
+    from{
+      transform: scaleX(0);
+    }
+     70%{
+       transform: scaleX(1.1);
+     }
+     to{
+        transform: scaleX(1);
+     }
+}
+@keyframes closeSide{
+    from{
+        transform: scaleX(1);
+        display: block;
+    }
+    to{
+        transform: scaleX(0);
+        display: none;
+    }
+}

@@ -1,8 +1,21 @@
 import logo from './assets/logo.jpg'
+import { useState } from 'react'
 /* import {Link} from 'react-router-dom' */
- import NavBar from './nav'
+import Links from './links/linkChoice'
 import './style.scss'
 export default function Header(){
+    const [sidebar, setSideBar] = useState(false)
+   
+    if(window.innerWidth <= 900 && sidebar === false){
+        const on = true
+        setSideBar(on)
+    }
+    else if(window.innerWidth >900 && sidebar === true){
+        const off = false
+        setSideBar(off)
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    
+    }
   /*   const tabs:string[] = ["Home","Programs", "About", 'Events', "Blog","Contact", "Store"] */
    /*  const tabList = tabs.map((tab) => {
         if(tab === ('About')){
@@ -37,16 +50,17 @@ export default function Header(){
     }) */
     return (
         <header key='header' className="p-10 bg-gray-500 "   >
-            <img key='logo' className='
+            <img id='logo' key='logo' className='
             xl:ml-20 md:ml-14 sm:ml-0
             ml-24 rounded-md border-solid border-black border-2' src = {logo} alt = 'FighterFoundation'></img>
-            <h1 className='text-3xl mt-3 ml-80 lg:ml-64 md:ml-24 sm:ml-8 sm:text-xl'  >"I Think there is Always Hope"<br></br>-Michelle B. Dejong</h1>
-            <h3 className='
+            <h1 id='quote'  className='text-3xl mt-3 ml-80 lg:ml-64 md:ml-24 sm:ml-8 sm:text-xl'  >"I Think there is Always Hope"<br></br>-Michelle B. Dejong</h1>
+            <h3 id='imgHeader' className='
             max-h-12 ml-16 border-solid border-2 border-black rounded-3xl 
             text-2xl text-center p-1 mr-5 bg-white text-gray-500
             xl:ml-20 xl:max-h-10  xl:min-w-72  lg:min-w-72 lg:ml-24 md:max-h-10 md:min-w-72 sm:min-w-72 sm:ml-2
             '>Fight to cure Glioblastoma!</h3>
-         <NavBar />
+            
+         <Links />
         </header>
     )
 }
