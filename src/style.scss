@@ -65,7 +65,7 @@ html, body{
     background-color: #71797E;
  }
  main{
-   
+  
     //ABOUT
     #quote-1{
         grid-column: 2/3;
@@ -171,7 +171,7 @@ html, body{
         align-items: center;
         font-size: large;
         background-color:gray;
-        width: 30vw;
+        
         height: auto;
         border-radius: 20px;
     }
@@ -183,4 +183,28 @@ html, body{
     }
 }
  }
- 
+ #imgMural{
+    display: none;
+   }
+ @media(max-width:875px){
+    #imgMural{
+        display: block;
+        width: 600px;
+        height: auto;
+        margin-top: 2vh;
+        border: solid 1px yellow;
+        box-shadow: -1px 0px 5px 10px #FFBF00;
+    }
+    .wrap{
+        display: none;
+    }
+ }
+
+ @media(max-width:775px){
+    main{
+        #imgMural{
+            width: 450px;
+        }
+         
+    }
+ }
