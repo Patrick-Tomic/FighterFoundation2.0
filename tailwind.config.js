@@ -6,8 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      
-      
+      fontFamily:{
+        'cabin':['Cabin','system-ui']
+      }
     },
   },
   plugins: [],

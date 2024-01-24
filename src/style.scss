@@ -208,27 +208,93 @@ html, body{
          
     }
  }
- @media(max-width:640px){
+ @media(max-width:500px){
+    #quote{
+       visibility: hidden;
+    }
+ }
+ @media(max-width:639px){
     header{
+            
+         
+        #sideBarBtn{
+            left: 84%;
+            top: 50%;
+        }
         #logo{
-            margin-left: 2vw;
+            margin-left: 0vw;
             max-width: 200px;
         }
         #quote{
-            margin-left: 6vw;
-            font-size: 25px;
+            margin-left: 5px;
+            margin-top: 0px;
+            font-size: 20px;
         }
         #imgHeader{
             width: 200px;
-            margin-left: 2vw;
+            margin-top: 0px;
+            margin-left: 0vw;
             font-size: 18px;
+            
         }
     }
     main{
         #imgMural{
             width:400px
         }
+        #Bio{
+            min-width:100% ;
+        }
+        #content{
+        ul{
+             
+            li{
+                list-style: none;
+            }
+        }
     }
+    }
+ }
+ @media(max-width:549px){
+    header{
+        #quote{
+            font-size: 16px;
+            margin-top: -10px;
+            margin-left: 30px;
+            width: 250px;
+        }
+        #sideBarBtn{
+            left: 80%;
+        }
+        #logo{
+            margin-top: 15px;
+        }
+        
+    }
+    main{
+        margin: 0;
+    #imgMural{
+        width: fit-content;
+    }
+}
+ }
+ @media(max-width:490px){
+    header{
+    #sideBarBtn{
+        left: 75%;
+        top: 30%;
+    }
+}
+ }
+ @media(max-width:360px){
+    #logo{
+        width: 175px;
+    }
+    #imgHeader{
+        min-height: 65px;
+        max-width: 175px;
+    }
+     
  }
  #active{
     animation: openSide 1s;
@@ -237,8 +303,8 @@ html, body{
     height: 100%;
     position: fixed;
     top: 0;
-    left: 80%;
-    width: 25vw;
+    left: 60%;
+    width: 45vw;
    z-index: 2;
     transform-origin: center right;
   
@@ -246,6 +312,14 @@ html, body{
 }  
 #deActive{
     animation: closeSide 1s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 70%;
+    width: 35vw;
+   z-index: 2;
     transform-origin: center right;
 }
 
