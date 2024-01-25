@@ -60,7 +60,7 @@ export default function Header(){
             xl:ml-20 xl:max-h-10  xl:min-w-72  lg:min-w-72 lg:ml-14 lg:w-80 md:max-h-10 md:min-w-72 sm:min-w-72 sm:ml-2
             '>Fight to cure Glioblastoma!</h3>
             </div>
-            <div className=' w-10'>
+            <div>
             <h1 id='quote'  className='text-3xl xl:mt-3 xl:ml-80 lg:ml-42 lg:text-3xl md:ml-10 md:mt-10 md:text-2xl sm:ml-0 sm:text-lg sm:mt-11'  >"I Think there is Always Hope"<br></br>-Michelle B. Dejong</h1>
          <Links />
          </div>
