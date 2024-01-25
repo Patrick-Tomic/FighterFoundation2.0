@@ -6,12 +6,14 @@
 html, body{
     margin: 0;
     padding: 0;
+    min-width: 100%;
 }
 
  header{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+ 
     box-shadow: 0px 5px 5px #FFBF00;
+    min-width: 100%;
     max-height:200px ;
     top: 0;
     position: sticky;
@@ -208,9 +210,13 @@ html, body{
          
     }
  }
- @media(max-width:500px){
+ @media(max-width:540px){
+    div{
     #quote{
-       visibility: hidden;
+      display: none;
+      width: 0;
+      
+    }
     }
  }
  @media(max-width:639px){
@@ -261,9 +267,7 @@ html, body{
             margin-left: 30px;
             width: 250px;
         }
-        #sideBarBtn{
-            left: 80%;
-        }
+       
         #logo{
             margin-top: 15px;
         }
@@ -285,13 +289,25 @@ html, body{
 }
  }
  @media(max-width:360px){
+    header{
+        
+   div{
+    button{
+        margin-right: 10px;
+    }
+   }
     #logo{
-        width: 175px;
+        width: 165px;
     }
     #imgHeader{
         min-height: 65px;
-        max-width: 175px;
+        max-width: 165px;
     }
+    svg{
+        width: 80px;
+        height: 60px;
+    }
+}
      
  }
  #active{

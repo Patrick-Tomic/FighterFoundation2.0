@@ -48,7 +48,7 @@ const patientLinks = patient.map((object) => {
         <div className='border-solid border-black border-2 bg-white gap-0 p-5 grid grid-cols-2'>
             
             <img className='w-96 bg-white' src={object.img} alt={object.description} />
-            <a className="underline text-blue-500 text-3xl " href= {object.link}> {object.linkText}</a>
+            <a className="underline text-blue-500 text-3xl mt-32" href= {object.link}> {object.linkText}</a>
             <p className='text-3xl col-span-2'>{object.description}</p>
         </div>
     )

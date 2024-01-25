@@ -38,7 +38,7 @@ export default function Sidebar(){
     return(
         <>
         {sideButton}
-        <div id='sidebar' className='hidden min-h-[100%] absolute bg-gray-400'>
+        <div id='sidebar' className='hidden m-0 min-h-[100%] absolute bg-gray-400'>
             <button onClick={() =>{
                  const sideBar = document.getElementById('active')
                  sideBar?.setAttribute('id','deActive')

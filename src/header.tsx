@@ -49,18 +49,21 @@ export default function Header(){
        return <li className='border-solid border-2 border-black list-none w-24 h-10 text-center p-1 bg-white text-lg ' key = {tab}> <Link to='/'> {tab} </Link></li>
     }) */
     return (
-        <header key='header' className="p-10 bg-gray-500 "   >
+        <header key='header' className="p-10 w-[100%] bg-gray-500 "   >
+           <div > 
             <img id='logo' key='logo' className='
             xl:ml-20 md:ml-0 sm:ml-0 lg:ml-16 md:
             ml-24 rounded-md border-solid border-black border-2' src = {logo} alt = 'FighterFoundation'></img>
-            <h1 id='quote'  className='text-3xl xl:mt-3 xl:ml-80 lg:ml-42 lg:text-3xl md:ml-10 md:mt-10 md:text-2xl sm:ml-0 sm:text-lg sm:mt-11'  >"I Think there is Always Hope"<br></br>-Michelle B. Dejong</h1>
             <h3 id='imgHeader' className='
             max-h-12 ml-16 border-solid border-2 border-black rounded-3xl 
             text-2xl text-center p-1 mr-5 bg-white text-gray-500
             xl:ml-20 xl:max-h-10  xl:min-w-72  lg:min-w-72 lg:ml-14 lg:w-80 md:max-h-10 md:min-w-72 sm:min-w-72 sm:ml-2
             '>Fight to cure Glioblastoma!</h3>
-            
+            </div>
+            <div className=' w-10'>
+            <h1 id='quote'  className='text-3xl xl:mt-3 xl:ml-80 lg:ml-42 lg:text-3xl md:ml-10 md:mt-10 md:text-2xl sm:ml-0 sm:text-lg sm:mt-11'  >"I Think there is Always Hope"<br></br>-Michelle B. Dejong</h1>
          <Links />
+         </div>
         </header>
     )
 }
