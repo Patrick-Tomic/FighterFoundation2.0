@@ -39,35 +39,24 @@ html, body{
        #hidden{
         display: none;
        }
-       #about:hover{
-        li{
-            width: 10vw;
-            height: 5vh;
-          
-        }
-        #hidden{
-            display: block;
-            font-size: 15px;
-        }
-       }
-        #programs:hover{
-            li{
-                width: 10vw;
-                height: 5vh;
-              
-            }
-            #hidden{
-                display: block;
-                font-size: 15px;
-            }
-        }
+    
+        
     }
  }
  body{
     background-color: #71797E;
  }
+ #oligo{
+    img{
+        margin-top: 5vh;
+    }
+    a{
+        margin-top: 10vh;
+        margin-left: 5vw;
+    }
+}
  main{
-  
+   
     //ABOUT
     #quote-1{
         grid-column: 2/3;
