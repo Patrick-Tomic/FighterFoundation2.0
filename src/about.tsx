@@ -6,18 +6,19 @@ import GBM from './assets/GBMAwareness.png'
  
 export default function About(){
      let count = 0
-    const quotes = ['Fighter Foundation is a non-profit commited to improving the quality of life for All and especially those whose lives have been impacted by a brain tumor.', 'A fighter approaches life with unwavering positivity, relentless hope and an insatiable appetite to make an impact. They fight not just for a cure for their cancer, but also for love, laughter and life!',GBM, `Define what you love, and fight for it every single day. -Michelle B. de Jong`, bike]
+    const quotes = ['Fighter Foundation is a non-profit commited to improving the quality of life for All and especially those whose lives have been impacted by a brain tumor.', 'A fighter approaches life with unwavering positivity, relentless hope and an insatiable appetite to make an impact. They fight not just for a cure for their cancer, but also for love, laughter and life!',GBM, `Define what you love, and fight for it every single day. Michelle B. de Jong`, bike]
     const quoteList = quotes.map((quote) =>{
         count++
         let content 
         if(quote === GBM || quote === bike){
             content = <img src ={quote}></img>
         } else{
-            content = <p className='text-center text-xl' >{quote}</p>
+            content = <p className='text-center lg:text-xl md:text-base md:p-2 sm:p-5 sm:text-xs' >{quote}</p>
         }
         return  ( 
            
-            <div  id={`quote-${count}`} className='quotes border-solid flex items-center justify-center border-black border-2 max-w-96 h-72 mt-4'> {content} </div>
+            <div  id={`quote-${count}`} className='quotes border-solid flex items-center justify-center border-black border-2 lg:max-w-96 lg:h-72 mt-4 
+            md:max-w-72 md:h-56 sm:h-60 sm:max-w-60'> {content} </div>
             
         )
     })
@@ -68,15 +69,16 @@ export default function About(){
     const boardList = board.map((object) => createPerson(object.person,object.title,object.pic, object.key))
     return ( 
         <main className='flex flex-col m-0'>
-             <div className='grid grid-cols-5 p-20 gap-10'>
-            
+            <h1 className='mt-5 ml-9 text-center text-3xl font-semibold Playfair   border-b-8   border-double border-black'>About The Foundation</h1>
+             <div id='quotes' className='grid grid-cols-5 p-20 gap-10 border-b-2 w-[100%] border-black'>
+                
                 {quoteList}
                 
              </div>
              <div className='grid grid-cols-3 gap-20' id='board'>
                  {boardList}
              </div>
-             <div className='lg:flex  border-solid border-black border-2 justify-around md:block'>
+             <div id='michelle' className='lg:flex  border-solid border-black border-t-2 justify-around md:block'>
              <img className='xl:w-[50vh] xl:h-[100vh] 2xl:w-[50vh] 2xl:h-[100vh] lg:w-[38vw] lg:h-[77vh] lg:min-h-[50vh]
              md:w-[35vw] md:h-[70vh] md:float-right md:m-5
              sm:float-right sm:m-10
@@ -100,13 +102,15 @@ export default function About(){
 function createPerson(name: ReactElement<any, string | JSXElementConstructor<any>> | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined, title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined, img: string | null | undefined, key: string){
     let pic
     if(img != null){
-        pic = <img className='max-w-52 rounded-sm mb-10 shadow-lg shadow-black' src = {img}></img>
+        pic = <img className='max-w-52 md:max-w-44 sm:max-w-36 rounded-sm mb-10 shadow-lg shadow-black' src = {img}></img>
     }
     return (
-        <div key = {key} className='p-20'>   
+        <div key = {key} className='p-20 md:p-10 sm:p-5 '>   
             {pic}
-            <h1 className='text-2xl font-bold border-b-8 text-center border-double border-black lg:min-w-[200px] '>{name}</h1>
-            <h3 className='text-center text-2xl max-w-52 Playfair lg:min-w-[200px]'>{title}</h3>
+            <h1 className='text-2xl font-bold border-b-8 text-center border-double border-black lg:min-w-[200px]
+             md:min-w-[150px] md:ml-3 sm:min-w-[100px] sm:ml-0'>{name}</h1>
+            <h3 className='text-center text-2xl max-w-52 Playfair lg:min-w-[200px] 
+            md:min-w-[150px] md:ml-3 sm:min-w-[100px] sm:ml-0'>{title}</h3>
         </div>
     )
 }

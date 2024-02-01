@@ -196,7 +196,12 @@ html, body{
         #imgMural{
             width: 450px;
         }
-         
+        #quote-3{
+            border: none;
+            background: none;
+            box-shadow: none;
+            min-width: 20vw;
+        }
     }
  }
  @media(max-width:540px){
@@ -232,6 +237,30 @@ html, body{
         }
     }
     main{
+        
+        #michelle{
+            img{
+                margin-left: 17%;
+            }
+        }
+        #board{
+            display: block;
+        }
+        #quotes{
+
+            width: 1005;
+            display: block;
+          
+            div{
+               margin-left: 15%;
+                max-width: 300px;
+                min-height: 150px;
+                border: none;
+               font-size: 14px;
+               padding: 0;
+             
+            }
+        }
         #imgMural{
             width:400px
         }
@@ -277,9 +306,28 @@ html, body{
     }
 }
  }
+ @media(max-width:410px){
+    main
+   { #board{
+        div{
+            padding: 5px;
+        }
+    }
+    #michelle{
+        img{
+            width: 164px;
+            margin-left: 115px;
+        }
+        div{
+            h1{
+                margin-left: 30px;
+            }
+        }
+    }}
+ }
  @media(max-width:360px){
     header{
-        
+       
    div{
     width: 5px;
     button{
@@ -298,7 +346,28 @@ html, body{
         height: 60px;
     }
 }
-     
+main{
+    h1{
+        font-size: 20px;
+        width: 200px;
+    }
+    #board{
+        div{
+            padding: 5px;
+        }
+    }
+    #michelle{
+        img{
+            width: 164px;
+            margin-left: 85px;
+        }
+        div{
+            h1{
+                margin-left: 30px;
+            }
+        }
+    }
+}
  }
  #active{
     animation: openSide 1s;
