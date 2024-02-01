@@ -13,8 +13,8 @@ export default function NavBar(){
                     <li className=' border-solid border-2 border-black list-none 2xl:w-24 h-10 text-center p-1 2xl:text-lg bg-white' key ='programs'><Link to='/programs'>Programs</Link> </li>
                       
                     </div>
-                    <li key = 'events' className='border-solid border-2 border-black list-none 2xl:w-24 h-10 text-center p-1 2xl:text-lg bg-white'> <Link to= '/'>Events</Link></li>
-                    <li key = 'blog' className='border-solid border-2 border-black list-none 2xl:w-24 h-10 text-center p-1 2xl:text-lg bg-white'> <Link to= '/'>Blog</Link></li>
+                    <li key = 'events' className='border-solid border-2 border-black list-none 2xl:w-24 h-10 text-center p-1 2xl:text-lg bg-white'> <Link to= '/events'>Events</Link></li>
+                    <li key = 'blog' className='border-solid border-2 border-black list-none 2xl:w-24 h-10 text-center p-1 2xl:text-lg bg-white'> <Link to= '/blog'>Blog</Link></li>
                     <li key = 'contact' className='border-solid border-2 border-black list-none 2xl:w-24 h-10 text-center p-1 2xl:text-lg bg-white'> <Link to= '/'>Contact</Link></li>
                     <li key = 'store' className='border-solid border-2 border-black list-none 2xl:w-24 h-10 text-center p-1 2xl:text-lg bg-white'> <Link to= '/'>Store</Link></li>
             </nav>
